@@ -36,3 +36,103 @@
     transform: rotate(360deg);
   }
 }
+.main-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('./youtube.png');
+  background-size: cover;
+  /* background-position: center;
+  background-repeat: no-repeat; Prevent background image from repeating */
+  color: #fff;
+  background-color: #000000;
+  display: flex;
+  justify-content: flex-end; /* Align content to the right */
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 600px; /* Increased container width */
+  padding: 70px; /* Increased padding */
+  border-radius: 10px;
+  background-color: #000000;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px; /* Increased font size */
+  margin-bottom: 30px; /* Increased margin */
+}
+
+form {
+  margin-top: 30px; /* Increased margin */
+}
+label[for="videoLink"] {
+  font-size: 24px; /* Adjust the font size as needed */
+  font-family: 'Arial', sans-serif; /* Specify the font family */
+}
+input[type='text'] {
+  padding: 20px; /* Increased input padding */
+  width: 100%;
+  border: none;
+  border-radius: 8px; /* Adjusted border radius */
+  margin-bottom: 30px; /* Increased margin */
+  background-color: #444;
+  color: #fff;
+  font-size: 20px; /* Increased font size */
+}
+.heading {
+  color: red; /* Text color set to red */
+  font-family: 'Montserrat', sans-serif;
+  font-size: 36px; /* Increased font size */
+  margin-bottom: 30px; /* Increased margin */
+}
+
+.gradient-button {
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 20px 40px; /* Increased button padding */
+  border-radius: 8px; /* Adjusted border radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 20px; /* Increased font size */
+}
+
+.gradient-button:hover {
+  background-color: #ff4d4d;
+}
+
+.analyze-button {
+  padding: 25px 50px; /* Increased button padding */
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 40px; /* Adjusted border radius */
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 24px; /* Increased font size */
+  font-weight: bold;
+  margin-top: 30px; /* Increased margin */
+}
+
+.analyze-button:hover {
+  background-color: #ff0000;
+  color: #000;
+}
+
+.analyze-button:active {
+  transform: scale(0.95);
+}
+
+.result {
+  margin-top: 30px; /* Increased margin */
+  padding: 20px;
+  border-radius: 8px; /* Adjusted border radius */
+  background-color: #444;
+  color: #fff;
+  font-size: 24px; /* Increased font size */
+}
