@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# YouTube Comments Sentiment Analyzer Web App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project consists of a **backend** Python script that retrieves YouTube video comments, performs sentiment analysis, and a **frontend** React-based web application that displays the sentiment analysis results interactively.
 
-## Available Scripts
+## Installation and Setup
 
-In the project directory, you can run:
+### 1. Clone the Repository
+Clone both the backend and frontend repository:
+```bash
+git clone https://github.com/aryapg/Youtube-Comments-Sentiment-Analyzer.git
+cd Youtube-Comments-Sentiment-Analyzer
 
-### `npm start`
+### 2. Backend Setup (Python)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### Install Required Dependencies
+Ensure you have Python 3.6 or higher installed. Then, install the required dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Configure API Key
+1. Obtain a YouTube Data API key from the Google Cloud Console.
+2. Open the `youtube_comments_sentiment.py` file in a text editor.
+3. Locate the `api_key` variable and replace `"YOUR_API_KEY"` with your actual API key:
+```python
+api_key = "YOUR_API_KEY"
+```
 
-### `npm test`
+#### Run the Sentiment Analyzer Backend
+```bash
+python youtube_comments_sentiment.py
+```
+Enter the YouTube video ID when prompted.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 3. Frontend Setup (React)
 
-### `npm run build`
+#### Install Dependencies
+Navigate to the frontend directory and install the required dependencies:
+```bash
+cd ../Youtube_Comments_Sentiment_Analyzer
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Run the Web Application
+```bash
+npm start
+```
+The app will open in your browser at `http://localhost:3000/`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Requirements
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Backend (Python)
+* Python 3.6 or higher
+* pandas
+* google-api-python-client
+* scikit-learn
+* textblob
+* nltk
+* emoji
+* gensim
+* matplotlib
+* numpy
 
-### `npm run eject`
+### Frontend (React)
+* Node.js and npm installed
+* React
+* React Bootstrap (if used in the project)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## File Descriptions
+* **youtube_comments_sentiment.py**: Backend script for sentiment analysis.
+* **requirements.txt**: Lists required Python packages.
+* **Frontend React files**: Contains the UI and logic for interacting with the backend.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Acknowledgments
+This project utilizes the YouTube Data API v3 and various machine learning libraries for sentiment analysis, along with React for frontend development.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
